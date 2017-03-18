@@ -1,49 +1,56 @@
+/**
+ * 
+ * 定义数据主体模型
+ * 
+ */
 package com.xr.bean;
 
 public class Student {
-	//定义接口的私有属性
+	
+	//定义底层对象模型
 	private String name;
-	private String address;
 	private Integer age;
+	private String address;
 	
-	//定义私有属性的访问方法
-	public void setName(String name){
+	//定义公有访问
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
 		this.name = name;
 	}
-	public String getName(){
-		return this.name;
+	public int getAge() {
+		return age;
 	}
-	
-	public void setAddress(String address){
-		this.address = address;
-	}
-	public String getAddress(){
-		return this.address;
-	}
-	
-	public void setAge(Integer age){
+	public void setAge(Integer age) {
 		this.age = age;
 	}
-	public Integer getAge(){
-		return this.age;
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
-	//定义构造方法
-	public Student(){
+	//定义构造初始化
+	public Student() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	public Student(String name,String address, Integer age){
+	public Student(String name, int age, String address) {
+		super();
 		this.name = name;
 		this.age = age;
 		this.address = address;
 	}
 	
-	//定义特有方法
+	//定义自有方法
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Student [name=" + name + ", age=" + age + ", sex=" + 
-				",address=" + address + "]";
+		return "学生名字是："+this.name+'\t'+
+				"年龄是："+this.age+'\t'+
+				"地址是："+this.address+'\t';
 	}
 	
 	
